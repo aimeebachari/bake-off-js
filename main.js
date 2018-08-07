@@ -17,6 +17,12 @@ let nameThatBake = (week, name) => {
   }
 };
 
+let weekBakes = (week) => {
+  for (let i = 0; i < bakers.length; i++) {
+    console.log(`${bakers[i]} baked a ${signatureBakes[i][week - 1]}.`);
+  }
+};
+
 let bakers = [
   "Chetna",
   "Diana",
