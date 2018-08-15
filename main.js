@@ -23,6 +23,27 @@ let weekBakes = (week) => {
   }
 };
 
+let bakesWith = (ingredient) => {
+  let num = 0;
+  for (let i = 0; i < signatureBakes.length; i++) {
+    signatureBakes[i].forEach((string) => {
+      if (string.toLowerCase().includes(ingredient.toLowerCase())) {
+        num = num + 1;
+      }
+    });
+  }
+  return `There are ${num} bakes with the word ${ingredient} in the title.`;
+};
+
+let doTheyExist = (name) => {
+  if (bakers.includes(name)) {
+    return `Yes ${name} was a contestant.`;
+  } else {
+    return `No ${name} was not a contestant.`;
+  }
+};
+
+
 let bakers = [
   "Chetna",
   "Diana",
