@@ -12,9 +12,10 @@ let nameThatBake = (week, name) => {
   let b = bakers.indexOf(name);
   for (let i = 0; i < signatureBakes.length; i++) {
     if (i == b) {
-      return signatureBakes[i][week - 1];
+      return `${name} baked ${signatureBakes[i][week - 1]}`;
     }
   }
+  return doTheyExist(name);
 };
 
 let weekBakes = (week) => {
