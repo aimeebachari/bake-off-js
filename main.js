@@ -45,6 +45,11 @@ let doTheyExist = (name) => {
   }
 };
 
+let addABaker = (name, array) => {
+  bakers.push(name);
+  signatureBakes.push(array);
+};
+
 
 let bakers = [
   "Chetna",
