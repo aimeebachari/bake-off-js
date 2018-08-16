@@ -50,6 +50,14 @@ let addABaker = (name, array) => {
   signatureBakes.push(array);
 };
 
+let printBakeSummary = (bakers, signatureBakes) => {
+  for (let i = 0; i < signatureBakes.length; i++) {
+    console.log(`${bakers[i]}\n`);
+    signatureBakes[i].forEach((bake) => {
+      console.log(`Week ${signatureBakes[i].indexOf(bake) + 1}: ${bake}`);
+    });
+  }
+};
 
 let bakers = [
   "Chetna",
