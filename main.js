@@ -30,6 +30,7 @@ let bakesWith = (ingredient) => {
     signatureBakes[i].forEach((string) => {
       if (string.toLowerCase().includes(ingredient.toLowerCase())) {
         num = num + 1;
+        console.log(`${bakers[i]} baked ${string}`);
       }
     });
   }
